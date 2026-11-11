@@ -1,6 +1,6 @@
 # TUNTAS PMB — Chatbot Tematik Rule-Based (Flask)
 
-Chatbot tematik berbasis aturan (rule-based) untuk informasi Penerimaan Mahasiswa Baru, dibuat dengan Flask. Tanpa LLM, RAG, maupun API eksternal.
+Chatbot tematik berbasis aturan (rule-based) untuk informasi Penerimaan Mahasiswa Baru, dibuat dengan Flask. 
 
 ## Fitur
 - Halaman landing, halaman chat, dan halaman admin statistik
