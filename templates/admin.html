@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statistik · {{ theme.bot_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <header><div><h1>Statistik · {{ theme.bot_name }}</h1>
+      <p>Salin pertanyaan yang tidak dikenali sebagai pola baru di themes/pmb.json. Ambang: {{ threshold }}</p></div></header>
+
+    <section class="stats">
+      <div><b>{{ s.total }}</b><span>pertanyaan</span></div>
+      <div><b>{{ s.dikenali_persen }}%</b><span>dikenali</span></div>
+      <div><b>{{ s.tidak_dikenali }}</b><span>tidak dikenali</span></div>
+      <div><b>{{ s.sesi }}</b><span>sesi</span></div>
+    </section>
+
+    <h2>Pertanyaan per intent</h2>
+    <table>
+      <tr><th>Intent</th><th>Jumlah</th></tr>
+      {% for r in s.per_intent %}
+      <tr><td>{{ r.intent }}</td><td>{{ r.n }}</td></tr>
+      {% endfor %}
+    </table>
+
+    <h2>Pertanyaan tidak dikenali (terbaru)</h2>
+    <table>
+      <tr><th>Pertanyaan</th><th>Skor</th><th>Waktu</th></tr>
+      {% for r in s.daftar_tak_dikenali %}
+      <tr><td>{{ r.text }}</td><td>{{ r.score }}</td><td>{{ r.created_at }}</td></tr>
+      {% endfor %}
+    </table>
+
+    <p>
+      <a href="{{ url_for('chat') }}">&larr; Kembali ke chat</a> ·
+      <a href="{{ url_for('landing') }}">Beranda</a>
+    </p>
+  </main>
+</body>
+</html>

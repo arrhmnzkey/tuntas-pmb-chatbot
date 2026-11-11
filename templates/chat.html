@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ theme.bot_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <div>
+        <h1>{{ theme.bot_name }}</h1>
+        <p>{{ theme.subtitle }}</p>
+      </div>
+      <div class="header-actions">
+        <a class="home-link" href="{{ url_for('landing') }}">← Beranda</a>
+        <button id="clear-btn" type="button">Hapus riwayat</button>
+      </div>
+    </header>
+
+    <div id="messages" aria-live="polite"></div>
+
+    <div id="suggestions">
+      {% for s in theme.suggestions %}
+      <button type="button" class="chip">{{ s }}</button>
+      {% endfor %}
+      <button type="button" class="chip">Menu</button>
+    </div>
+
+    <form id="chat-form" autocomplete="off">
+      <input id="chat-input" maxlength="500" placeholder="Ketik pesan..." required>
+      <button type="submit">Kirim</button>
+    </form>
+  </main>
+
+  <script>const GREETING = {{ theme.greeting | tojson }};</script>
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

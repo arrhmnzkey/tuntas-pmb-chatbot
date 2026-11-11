@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ theme.bot_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card landing">
+    <section class="hero">
+      <h1>{{ theme.bot_name }}</h1>
+      <p>{{ theme.subtitle }}</p>
+      <a class="cta" href="{{ url_for('chat') }}">Mulai Chat</a>
+    </section>
+
+    <section>
+      <h2>Informasi yang tersedia</h2>
+      <ul class="topics">
+        <li>Jadwal Pendaftaran</li>
+        <li>Syarat &amp; Prosedur Pendaftaran</li>
+        <li>Rincian Biaya Kuliah</li>
+        <li>Daftar Program Studi</li>
+        <li>Informasi Beasiswa</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cara menggunakan</h2>
+      <ol>
+        <li>Klik <b>Mulai Chat</b></li>
+        <li>Ketik pertanyaan atau angka menu 1-5</li>
+        <li>Ketik <b>MENU</b> untuk kembali ke pilihan awal</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

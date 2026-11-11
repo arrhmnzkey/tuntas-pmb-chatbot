@@ -1,0 +1,28 @@
+kalimat,intent
+halo admin,greeting
+selamat pagi mau tanya tanya,greeting
+menu utama,greeting
+tolong bantu dong,fallback
+kapan pendaftaran jalur reguler dibuka,jadwal_pendaftaran
+jadwal tes gelombang 2,jadwal_pendaftaran
+kapan gelombang 1 ditutup,jadwal_pendaftaran
+1,jadwal_pendaftaran
+syarat masuknya apa saja,syarat_prosedur
+berkas yang harus di upload apa,syarat_prosedur
+bagaimana cara daftarnya,syarat_prosedur
+2,syarat_prosedur
+berapa biaya kuliah per semester,biaya_kuliah
+ada rincian pembayaran spp,biaya_kuliah
+uang pangkalnya berapa,biaya_kuliah
+3,biaya_kuliah
+ada jurusan apa saja,daftar_prodi
+daftar prodi di fakultas teknik,daftar_prodi
+4,daftar_prodi
+apakah ada beasiswa kip,info_beasiswa
+cara dapat beasiswa jalur prestasi,info_beasiswa
+5,info_beasiswa
+kapan ada open house,fallback
+apakah bisa daftar lewat whatsapp,fallback
+info asrama,fallback
+siapa presiden indonesia,fallback
+harga bensin berapa,fallback

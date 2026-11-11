@@ -1,0 +1,54 @@
+{
+  "id": "pmb",
+  "bot_name": "TUNTAS PMB",
+  "subtitle": "Teman Untuk Navigasi Tanya Administrasi Seleksi",
+  "greeting": "Selamat datang di TUNTAS PMB, layanan informasi Penerimaan Mahasiswa Baru.\nSaya TUNTAS, siap membantu Anda. Silakan ketik angka atau pilih menu di bawah untuk memilih informasi yang Anda butuhkan:\n1. Jadwal Pendaftaran\n2. Syarat & Prosedur Pendaftaran\n3. Rincian Biaya Kuliah\n4. Daftar Program Studi / Jurusan\n5. Informasi Beasiswa",
+  "suggestions": ["Jadwal", "Syarat", "Biaya", "Jurusan", "Beasiswa"],
+  "fallback": [
+    "Maaf, TUNTAS belum memahami pesan Anda.\nSilakan ketik kata kunci seperti JADWAL, SYARAT, BIAYA, JURUSAN, BEASISWA, atau ketik MENU untuk melihat opsi yang tersedia."
+  ],
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["halo", "hai", "selamat pagi", "selamat siang", "selamat malam", "start", "menu", "help", "mulai", "menu utama", "mau tanya tanya"],
+      "responses": [
+        "Selamat datang di TUNTAS PMB, layanan informasi Penerimaan Mahasiswa Baru.\nSaya TUNTAS, siap membantu Anda. Silakan ketik angka atau pilih menu di bawah untuk memilih informasi yang Anda butuhkan:\n1. Jadwal Pendaftaran\n2. Syarat & Prosedur Pendaftaran\n3. Rincian Biaya Kuliah\n4. Daftar Program Studi / Jurusan\n5. Informasi Beasiswa"
+      ]
+    },
+    {
+      "tag": "jadwal_pendaftaran",
+      "patterns": ["jadwal pendaftaran", "kapan pendaftaran dibuka", "kapan pendaftaran ditutup", "jadwal tes gelombang 2", "gelombang pendaftaran", "tanggal buka tutup", "jadwal", "1"],
+      "responses": [
+        "Jadwal Pendaftaran PMB Tahun Akademik 2027/2028:\n- Gelombang 1: 1 Desember 2026 - 28 Februari 2027\n- Gelombang 2: 1 Maret 2027 - 31 Mei 2027\n- Gelombang 3 (Jalur Ujian Mandiri): 1 Juni 2027 - 15 Juli 2027\nKetik MENU untuk kembali ke menu utama."
+      ]
+    },
+    {
+      "tag": "syarat_prosedur",
+      "patterns": ["syarat masuk", "persyaratan pendaftaran", "dokumen yang harus disiapkan", "berkas yang harus diupload", "cara daftar", "bagaimana cara daftar", "prosedur pendaftaran", "syarat", "2"],
+      "responses": [
+        "Syarat & Langkah Pendaftaran Online:\n1. Scan Ijazah / Surat Keterangan Lulus (SKL)\n2. Scan Kartu Keluarga (KK) & Pasfoto 4x6 (Background Merah)\n3. Membuat akun di portal pendaftaran online kampus\n4. Mengisi formulir dan mengunggah berkas\n5. Membayar biaya formulir pendaftaran sebesar Rp 250.000\nKetik MENU untuk kembali ke menu utama."
+      ]
+    },
+    {
+      "tag": "biaya_kuliah",
+      "patterns": ["biaya kuliah", "berapa biaya per semester", "rincian pembayaran spp", "uang pangkal berapa", "spp", "ukt", "harga kuliah", "3"],
+      "responses": [
+        "Informasi Biaya Kuliah:\n- Biaya Formulir: Rp 250.000 (Satu kali di awal)\n- SPP Tetap per Semester: Rp 3.500.000\n- Uang Pengembangan (SPI): Rp 5.000.000 - Rp 10.000.000 (tergantung pilihan program studi dan gelombang pendaftaran)\nCatatan: Biaya dapat diangsur 3 kali dalam satu semester.\nKetik MENU untuk kembali ke menu utama."
+      ]
+    },
+    {
+      "tag": "daftar_prodi",
+      "patterns": ["jurusan apa saja", "prodi", "program studi", "prodi fakultas teknik", "akreditasi prodi", "fakultas", "jurusan", "4"],
+      "responses": [
+        "Daftar Program Studi Unggulan (Akreditasi A & Unggul):\n- Teknologi Informasi / Teknik Informatika (S1)\n- Sistem Informasi (S1)\n- Teknik Elektro (S1)\n- Manajemen & Bisnis Digital (S1)\nKetik MENU untuk kembali ke menu utama."
+      ]
+    },
+    {
+      "tag": "info_beasiswa",
+      "patterns": ["beasiswa", "beasiswa kip", "potongan biaya", "diskon pendaftaran", "beasiswa jalur prestasi", "cara dapat beasiswa", "kip", "5"],
+      "responses": [
+        "Jalur Beasiswa yang Tersedia:\n- Beasiswa Prestasi Akademik: Bebas Uang Pengembangan 100% bagi peringkat 1-3 di SMA/SMK.\n- Beasiswa KIP-Kuliah: Kuota terbatas untuk pendaftar Gelombang 1 & 2.\n- Beasiswa Influencer / Talenta: Bebas SPP 2 semester.\nPendaftaran beasiswa diverifikasi langsung saat unggah berkas nilai rapot.\nKetik MENU untuk kembali ke menu utama."
+      ]
+    }
+  ]
+}
